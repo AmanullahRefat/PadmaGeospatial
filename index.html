@@ -118,7 +118,6 @@
                  <img src="https://raw.githubusercontent.com/AmanullahRefat/PadmaGeospatial/3777122a3f7d96876d53a005ab42caeceed8f4f1/images/PGeo%20Solutions.png" alt="Padma Geospatial Logo" class="h-12 w-auto">
                  <span class="text-xl font-bold text-gray-900">Padma GeoSpatial</span>
             </a>
-            <!-- Desktop Navigation -->
             <nav class="hidden md:flex items-center space-x-8 text-gray-500 font-medium">
                 <a href="#home" class="nav-link">Home</a>
                 <a href="#about" class="nav-link">About</a>
@@ -358,12 +357,15 @@
                             <div class="flex items-start space-x-4"><i class="fas fa-envelope text-accent text-xl mt-1"></i><div><h4 class="font-semibold text-lg">Email</h4><a href="mailto:amanullah.geo.du@gmail.com" class="text-gray-600 hover:text-accent">amanullah.geo.du@gmail.com</a></div></div>
                             <div class="flex items-start space-x-4"><i class="fas fa-phone-alt text-accent text-xl mt-1"></i><div><h4 class="font-semibold text-lg">Phone</h4><p class="text-gray-600">+8801843255836</p></div></div>
                         </div>
+                        <div class="mt-8 rounded-lg overflow-hidden shadow-lg">
+                           <iframe src="https://maps.google.com/maps?q=23.734049861754055,90.41758690236439&z=15&output=embed" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
                     </div>
                     <div class="bg-white p-8 rounded-lg shadow-sm reveal">
                          <h3 class="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h3>
-                         <form id="contactForm" class="space-y-4">
+                         <form id="contactForm" action="https://formspree.io/f/mkgzljew" method="POST" class="space-y-4">
                              <div><label for="name" class="block text-gray-700 font-medium mb-1">Your Name</label><input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent" required></div>
-                             <div><label for="email" class="block text-gray-700 font-medium mb-1">Your Email</label><input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent" required></div>
+                             <div><label for="email" class="block text-gray-700 font-medium mb-1">Your Email</label><input type="email" id="email" name="_replyto" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent" required></div>
                              <div><label for="subject" class="block text-gray-700 font-medium mb-1">Subject</label><input type="text" id="subject" name="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent" required></div>
                              <div><label for="message" class="block text-gray-700 font-medium mb-1">Message</label><textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent" required></textarea></div>
                              <div><button type="submit" class="w-full bg-accent text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-600 transition-colors duration-300">Submit</button></div>
@@ -395,8 +397,8 @@
                 <div class="lg:col-span-2">
                     <h3 class="text-lg font-semibold mb-4">Subscribe to our Newsletter</h3>
                     <p class="text-gray-400 mb-4">Get the latest articles and insights from our team.</p>
-                    <form id="newsletterFormFooter" class="flex flex-col sm:flex-row gap-4">
-                        <input type="email" placeholder="Enter your email" class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent text-white" required>
+                    <form id="newsletterFormFooter" action="https://formspree.io/f/xeozbadd" method="POST" class="flex flex-col sm:flex-row gap-4">
+                        <input type="email" name="email" placeholder="Enter your email" class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent text-white" required>
                         <button type="submit" class="bg-accent text-white font-bold py-2 px-6 rounded-lg hover:bg-blue-600 transition-colors duration-300 whitespace-nowrap">Subscribe</button>
                     </form>
                 </div>
@@ -404,7 +406,7 @@
             <div class="border-t border-gray-700 pt-4 mt-6 flex flex-col sm:flex-row justify-between items-center">
                 <p class="text-gray-500 text-sm">&copy; 2024 Padma Geospatial Solutions Ltd. All Rights Reserved.</p>
                 <div class="flex space-x-4 mt-4 sm:mt-0">
-                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61579305396441" target="_blank" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
                     <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
                 </div>
@@ -439,11 +441,16 @@
                 title: "High-Precision Geospatial Data Visualization", 
                 category: "gis-mapping", 
                 date: "2024-08-05", 
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq7-U4hS1P8zTgxWu7wF8GVyczJHKpbpTf2g&s",
                 summary: "Explore how advanced data visualization is transforming strategic decision-making across industries.",
                 content: `
                     <div class="prose max-w-none text-lg text-gray-700 leading-relaxed">
                         <h3 class="font-bold text-xl mb-3">What is High-Precision Geospatial Data Visualization?</h3>
                         <p class="mb-4">Geospatial data visualization is the process of representing spatial information in graphical formats, such as maps, 3D models, and interactive dashboards. High-precision visualization enhances this by using cutting-edge technologies to ensure accuracy, detail, and real-time updates. This includes using high-resolution data from sources like satellites, drones, and LiDAR; advanced analytics from AI and ML to identify patterns; and interactive tools like GIS platforms. The goal is to turn raw data into actionable insights for strategic decisions.</p>
+                        <figure class="my-8">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq7-U4hS1P8zTgxWu7wF8GVyczJHKpbpTf2g&s" class="rounded-lg shadow-md">
+                            <figcaption class="text-center text-sm text-gray-500 mt-2">Figure 1: A 3D model of a city, a key tool in high-precision visualization.</figcaption>
+                        </figure>
                         <h3 class="font-bold text-xl mb-3">Why High-Precision Visualization Matters</h3>
                         <ul class="list-disc list-inside mb-4 space-y-2">
                             <li><b>Enhanced Accuracy:</b> It ensures decisions are based on accurate, up-to-date information, useful for things like urban planning.</li>
@@ -459,18 +466,21 @@
                 title: "Advanced Spatial Modeling for EIA", 
                 category: "gis-mapping", 
                 date: "2024-07-25", 
+                image: "https://files.readme.io/b438d6f-suitability-layer-settings.png",
                 summary: "A deep dive into the techniques used for effective environmental impact assessment.", 
                 content: `
                     <div class="prose max-w-none text-lg text-gray-700 leading-relaxed">
                         <p>Environmental Impact Assessments (EIA) are crucial for ensuring that development projects are sustainable and do not cause undue harm to the environment. Advanced spatial modeling techniques, powered by GIS, have become indispensable in this process, allowing for a more comprehensive and quantitative analysis of potential impacts.</p>
+                        <figure class="my-8">
+                            <img src="https://files.readme.io/b438d6f-suitability-layer-settings.png" class="rounded-lg shadow-md">
+                            <figcaption class="text-center text-sm text-gray-500 mt-2">Figure 1: Example of a suitability analysis map used in EIA. (Source: readme.io)</figcaption>
+                        </figure>
                         <h3 class="font-bold text-xl mt-4 mb-3">Key Spatial Modeling Techniques in EIA:</h3>
                         <ul class="list-disc list-inside mb-4 space-y-2">
                             <li><b>Suitability Analysis:</b> This technique involves overlaying multiple spatial layers to identify the most and least suitable locations for a project.</li>
                             <li><b>Hydrological Modeling:</b> These models predict how a project might alter water flow, affect water quality, or increase flood risk.</li>
                             <li><b>Habitat and Species Distribution Modeling:</b> These models predict the potential impact on biodiversity by analyzing how a project might fragment habitats.</li>
                         </ul>
-                        <h3 class="font-bold text-xl mt-4 mb-3">The Value of a Geospatial Approach:</h3>
-                        <p>By using these spatial modeling techniques, EIAs can move beyond simple checklists to provide a dynamic and spatially explicit understanding of environmental impacts. This allows planners and decision-makers to visualize the consequences of different project scenarios, design more effective mitigation measures, and ultimately make more informed and sustainable development choices.</p>
                     </div>
                 `
             },
@@ -479,17 +489,16 @@
                 title: "Interactive Web GIS Dashboards", 
                 category: "web-gis", 
                 date: "2024-07-05", 
+                image: "https://www.esri.com/arcgis-blog/wp-content/uploads/2022/06/Picture1-2.png",
                 summary: "Learn how real-time, interactive dashboards are empowering organizations with actionable insights.", 
                 content: `
                     <div class="prose max-w-none text-lg text-gray-700 leading-relaxed">
                         <p>In today's data-driven world, organizations are increasingly relying on spatial data for informed decisions. The true power of GIS lies in effectively visualizing and analyzing this data, which is where Interactive Web GIS Dashboards play a crucial role.</p>
+                        <figure class="my-8">
+                            <img src="https://www.esri.com/arcgis-blog/wp-content/uploads/2022/06/Picture1-2.png" class="rounded-lg shadow-md">
+                            <figcaption class="text-center text-sm text-gray-500 mt-2">Figure 1: A sample Web GIS dashboard for monitoring operations. (Source: Esri)</figcaption>
+                        </figure>
                         <p>These dashboards are dynamic, user-friendly interfaces that integrate spatial data with real-time analytics. They allow users to visualize data on maps, charts, and graphs, enabling them to explore trends, identify patterns, and make data-driven decisions.</p>
-                        <h3 class="font-bold text-xl mt-4 mb-3">How Custom Dashboards Transform Organizations:</h3>
-                        <ul class="list-disc list-inside mb-4 space-y-2">
-                            <li><b>Real-Time Data Visualization:</b> Providing real-time updates that are critical for timely decisions.</li>
-                            <li><b>Enhanced Data Accessibility:</b> Presenting complex data in a visually appealing format for non-technical users.</li>
-                            <li><b>Improved Decision-Making:</b> Enabling users to explore data from multiple angles to uncover valuable insights.</li>
-                        </ul>
                     </div>
                 `
             },
@@ -498,10 +507,15 @@
                 title: "The Role of Drones in Modern Surveying", 
                 category: "survey-data", 
                 date: "2024-06-28", 
+                image: "https://5.imimg.com/data5/SELLER/Default/2024/9/454505500/DB/WY/HM/34172042/aerial-drone-survey-services.jpg",
                 summary: "Discover how UAVs are revolutionizing data collection with high-resolution imagery and 3D models.", 
                 content: `
                     <div class="prose max-w-none text-lg text-gray-700 leading-relaxed">
                         <p>Unmanned Aerial Vehicles (UAVs), commonly known as drones, have emerged as a disruptive technology in the field of surveying and mapping. They offer a powerful alternative to traditional ground-based methods, providing a unique combination of speed, accuracy, safety, and cost-effectiveness.</p>
+                        <figure class="my-8">
+                            <img src="https://5.imimg.com/data5/SELLER/Default/2024/9/454505500/DB/WY/HM/34172042/aerial-drone-survey-services.jpg" class="rounded-lg shadow-md">
+                            <figcaption class="text-center text-sm text-gray-500 mt-2">Figure 1: UAV in action during an aerial survey. (Source: IndiaMART)</figcaption>
+                        </figure>
                         <h3 class="font-bold text-xl mt-4 mb-3">Key Advantages of Drone Surveying:</h3>
                         <ul class="list-disc list-inside mb-4 space-y-2">
                             <li><b>Speed and Efficiency:</b> Drones can survey large areas in a fraction of the time it would take a ground crew.</li>
@@ -516,18 +530,21 @@
                 title: "AI and Machine Learning in Geospatial Analysis", 
                 category: "contemporary", 
                 date: "2024-06-20", 
+                image: "https://towardsdatascience.com/wp-content/uploads/2024/01/1NGcaaVHPBOkje_M6-Seu3w.png",
                 summary: "Unpacking the current trends and applications of AI/ML in the geospatial field.", 
                 content: `
                     <div class="prose max-w-none text-lg text-gray-700 leading-relaxed">
                         <p>The integration of Artificial Intelligence (AI) and Machine Learning (ML) is revolutionizing how we interpret, analyze, and utilize spatial data. These technologies are transforming various sectors, from urban planning and environmental monitoring to disaster management and precision agriculture.</p>
+                        <figure class="my-8">
+                            <img src="https://towardsdatascience.com/wp-content/uploads/2024/01/1NGcaaVHPBOkje_M6-Seu3w.png" class="rounded-lg shadow-md">
+                            <figcaption class="text-center text-sm text-gray-500 mt-2">Figure 1: Conceptual diagram of a neural network used in AI. (Source: Towards Data Science)</figcaption>
+                        </figure>
                         <h3 class="font-bold text-xl mt-4 mb-3">Current Trends in Geospatial AI/ML:</h3>
                         <ul class="list-disc list-inside mb-4 space-y-2">
                             <li><b>Deep Learning for Image Analysis:</b> Convolutional Neural Networks (CNNs) are used for land cover classification, object detection, and change detection.</li>
                             <li><b>Predictive Modeling and Simulation:</b> AI/ML models forecast natural disasters, simulate climate impacts, and predict crop yields.</li>
                             <li><b>Geospatial Big Data Analytics:</b> Techniques like clustering and regression help manage and analyze massive spatial datasets.</li>
                         </ul>
-                        <h3 class="font-bold text-xl mt-4 mb-3">Challenges and Conclusion:</h3>
-                        <p>Despite the potential, challenges like data quality and ethical concerns remain. Interdisciplinary collaboration is key to unlocking the full potential of AI and ML in creating a more sustainable and resilient future.</p>
                     </div>
                 `
             },
@@ -536,14 +553,17 @@
                 title: "Understanding Coastal Zone Management", 
                 category: "miscellaneous", 
                 date: "2024-06-12", 
+                image: "https://www.tuckermanreef.com/images/MSP-master-diagram2.jpg",
                 summary: "A deep dive into various aspects of coastal management, assessing strengths and weaknesses.", 
                 content: `
                     <div class="prose max-w-none text-lg text-gray-700 leading-relaxed">
                         <p>Coastal zones are among the most dynamic and productive ecosystems on Earth, but they are also highly vulnerable to pressures from both human activities and natural phenomena like climate change. Effective management is crucial for their long-term sustainability. Integrated Coastal Zone Management (ICZM) is a widely recognized framework for achieving this.</p>
+                        <figure class="my-8">
+                            <img src="https://www.tuckermanreef.com/images/MSP-master-diagram2.jpg" class="rounded-lg shadow-md">
+                            <figcaption class="text-center text-sm text-gray-500 mt-2">Figure 1: Diagram illustrating the complexities of coastal zone management. (Source: Tuckerman Reef)</figcaption>
+                        </figure>
                         <h3 class="font-bold text-xl mt-4 mb-3">What is ICZM?</h3>
                         <p>ICZM is a dynamic, multidisciplinary, and iterative process to promote sustainable management of coastal zones. It covers the full cycle of information collection, planning, decision-making, management, and monitoring of implementation.</p>
-                        <h3 class="font-bold text-xl mt-4 mb-3">Challenges in Coastal Management:</h3>
-                        <p>In a country like Bangladesh, with a long, low-lying, and densely populated coastline, the challenges are immense, including sea-level rise, increased frequency of cyclones, and coastal erosion.</p>
                     </div>
                 `
             }
@@ -609,8 +629,8 @@
             container.innerHTML = projectsData.map(p => `
                 <a href="#project/${p.id}" class="relative block h-80 rounded-lg overflow-hidden group reveal shadow-sm">
                     <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                        <div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <div class="md:transform md:translate-y-4 md:group-hover:translate-y-0 transition-transform duration-300">
                             <h3 class="text-xl font-bold text-white mb-1">${p.title}</h3>
                             <p class="text-sm text-gray-200">${p.client}</p>
                         </div>
@@ -658,6 +678,7 @@
             
             container.innerHTML = filteredPosts.map(p => `
                  <a href="#blog/${p.id}" class="block bg-white rounded-lg shadow-sm card-hover overflow-hidden group reveal">
+                    <img src="${p.image}" alt="${p.title}" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <p class="text-sm text-accent font-semibold mb-2">${blogCategories[p.category].name}</p>
                         <h3 class="text-xl font-bold text-gray-800 mb-3">${p.title}</h3>
@@ -709,21 +730,31 @@
                 submitButton.textContent = 'Sending...';
                 submitButton.disabled = true;
 
-                setTimeout(() => { // Simulate network request
-                    form.reset();
-                    const successMessage = document.createElement('p');
-                    successMessage.className = 'text-green-600 mt-4 text-center';
-                    successMessage.textContent = "Thank you! Your message has been sent.";
-                    if (formId === 'newsletterFormBlog') {
-                         successMessage.className = 'text-green-600 mt-4 text-center';
-                    } else {
-                         successMessage.className = 'text-green-400 mt-4 text-sm';
+                fetch(e.target.action, {
+                    method: form.method,
+                    body: new FormData(e.target),
+                    headers: {
+                        'Accept': 'application/json'
                     }
-                    form.parentNode.appendChild(successMessage);
+                }).then(response => {
+                    if (response.ok) {
+                        form.reset();
+                        const successMessage = document.createElement('p');
+                        successMessage.className = 'text-green-600 mt-4 text-center';
+                        successMessage.textContent = "Thank you! Your message has been sent.";
+                        form.parentNode.appendChild(successMessage);
+                        setTimeout(() => successMessage.remove(), 5000);
+                    } else {
+                        response.json().then(data => {
+                            // Handle errors, e.g., display an error message
+                        })
+                    }
+                }).catch(error => {
+                    // Handle network errors
+                }).finally(() => {
                     submitButton.textContent = originalButtonText;
                     submitButton.disabled = false;
-                    setTimeout(() => successMessage.remove(), 5000);
-                }, 1000);
+                });
             });
         }
 

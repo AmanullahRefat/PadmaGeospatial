@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="google-site-verification" content="o1OgYgd0QtZkbfhM_7ut4PYsNAF-cE5rWYWwPoj0Arc" />
+<meta name="google-site-verification" content="o1OgYgd0QtZkbfhM_7ut4PYsNAF-cE5rWYWwPoj0Arc" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Padma Geospatial Solutions Ltd.</title>
@@ -291,6 +291,56 @@
                             <li>API Integration & Development</li>
                             <li>Data Visualization & Storytelling</li>
                         </ul>
+                    </div>
+                </div>
+                
+                <!-- Service Packages Section -->
+                <div class="mt-20">
+                    <div class="text-center">
+                        <h2 class="section-title reveal">Service Packages</h2>
+                        <p class="section-subtitle reveal">
+                            We offer flexible packages to suit your project's scale and budget.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                        <!-- Starter Package -->
+                        <div class="bg-white rounded-lg shadow-sm p-8 flex flex-col reveal">
+                            <h3 class="text-2xl font-bold mb-2">Starter</h3>
+                            <p class="text-gray-500 mb-4">Ideal for students, researchers, and small-scale projects.</p>
+                            <p class="text-4xl font-bold my-4">Starts at <span class="text-accent">৳15,000</span></p>
+                            <ul class="space-y-3 text-gray-600 flex-grow">
+                                <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i>High-Quality Study Area Map</li>
+                                <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i>Basic Data Collection</li>
+                                <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i>Standard Geoprocessing</li>
+                            </ul>
+                            <a href="#contact" class="bg-gray-200 text-gray-800 font-bold py-3 px-6 rounded-full hover:bg-gray-300 transition-colors duration-300 mt-8 text-center">Get a Quote</a>
+                        </div>
+                        <!-- Professional Package -->
+                        <div class="bg-white rounded-lg shadow-lg p-8 flex flex-col reveal border-2 border-accent" style="transition-delay: 0.2s;">
+                            <h3 class="text-2xl font-bold mb-2">Professional</h3>
+                            <p class="text-gray-500 mb-4">Perfect for businesses, NGOs, and detailed analytical reports.</p>
+                            <p class="text-4xl font-bold my-4">Starts at <span class="text-accent">৳50,000</span></p>
+                            <ul class="space-y-3 text-gray-600 flex-grow">
+                                <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i>Everything in Starter, plus:</li>
+                                <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i>LULC Classification</li>
+                                <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i>Custom Web Map</li>
+                                <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i>Detailed Spatial Analysis</li>
+                            </ul>
+                            <a href="#contact" class="bg-accent text-white font-bold py-3 px-6 rounded-full hover:bg-blue-600 transition-colors duration-300 mt-8 text-center">Get a Quote</a>
+                        </div>
+                        <!-- Enterprise Package -->
+                        <div class="bg-white rounded-lg shadow-sm p-8 flex flex-col reveal" style="transition-delay: 0.4s;">
+                            <h3 class="text-2xl font-bold mb-2">Enterprise</h3>
+                            <p class="text-gray-500 mb-4">For large-scale projects and custom application development.</p>
+                            <p class="text-4xl font-bold my-4">Custom Quote</p>
+                            <ul class="space-y-3 text-gray-600 flex-grow">
+                                <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i>Everything in Professional, plus:</li>
+                                <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i>Custom Web GIS Application</li>
+                                <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i>Advanced Modeling</li>
+                                <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i>Dedicated Support</li>
+                            </ul>
+                            <a href="#contact" class="bg-gray-200 text-gray-800 font-bold py-3 px-6 rounded-full hover:bg-gray-300 transition-colors duration-300 mt-8 text-center">Get a Quote</a>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -723,38 +773,38 @@
         function handleFormSubmit(formId) {
             const form = document.getElementById(formId);
             if (!form) return; // Add this check to prevent errors
-            form.addEventListener('submit', function(e) {
+            form.addEventListener('submit', async function(e) {
                 e.preventDefault();
                 const submitButton = form.querySelector('button');
                 const originalButtonText = submitButton.textContent;
                 submitButton.textContent = 'Sending...';
                 submitButton.disabled = true;
 
-                fetch(e.target.action, {
+                const formData = new FormData(form);
+                const response = await fetch(form.action, {
                     method: form.method,
-                    body: new FormData(e.target),
+                    body: formData,
                     headers: {
                         'Accept': 'application/json'
                     }
-                }).then(response => {
-                    if (response.ok) {
-                        form.reset();
-                        const successMessage = document.createElement('p');
-                        successMessage.className = 'text-green-600 mt-4 text-center';
-                        successMessage.textContent = "Thank you! Your message has been sent.";
-                        form.parentNode.appendChild(successMessage);
-                        setTimeout(() => successMessage.remove(), 5000);
-                    } else {
-                        response.json().then(data => {
-                            // Handle errors, e.g., display an error message
-                        })
-                    }
-                }).catch(error => {
-                    // Handle network errors
-                }).finally(() => {
-                    submitButton.textContent = originalButtonText;
-                    submitButton.disabled = false;
                 });
+
+                if (response.ok) {
+                    form.reset();
+                    const successMessage = document.createElement('p');
+                    successMessage.className = 'text-green-600 mt-4 text-center';
+                    successMessage.textContent = "Thank you! Your message has been sent.";
+                     if (formId === 'newsletterFormFooter') {
+                         successMessage.className = 'text-green-400 mt-4 text-sm';
+                    }
+                    form.parentNode.appendChild(successMessage);
+                    setTimeout(() => successMessage.remove(), 5000);
+                } else {
+                    // Handle error
+                }
+
+                submitButton.textContent = originalButtonText;
+                submitButton.disabled = false;
             });
         }
 
@@ -789,4 +839,3 @@
     </script>
 </body>
 </html>
-
